@@ -1,0 +1,148 @@
+:root {
+	--softBlue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--cyanBG: hsl(178, 100%, 50%, 0.5);
+	--darkBlueBG: hsl(217, 54%, 11%);
+	--darkBlueCard: hsl(216, 50%, 16%);
+	--darkBlueLine: #2f415b;
+	--white: #fff;
+}
+
+* {
+	font-family: 'Outfit', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--darkBlueBG);
+	margin: 0 auto;
+}
+
+main {
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	max-width: 300px;
+	background-color: var(--darkBlueCard);
+	padding: 20px;
+	margin: 20px;
+	position: relative;
+	top: 100px;
+	border-radius: 15px;
+	box-shadow: 0px 10px 50px 0px var(--darkBlueCard);
+}
+
+.image-block {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-image: url('./assets/image-equilibrium.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--cyanBG);
+	opacity: 0;
+}
+
+.image-block:hover .overlay {
+	cursor: pointer;
+	transition: all 0.3s;
+	opacity: 1;
+}
+
+.overlay img {
+	position: absolute;
+	left: 120px;
+	top: 110px;
+	width: 70px;
+}
+
+h1 {
+	padding: 10px;
+	color: var(--white);
+}
+
+p {
+	font-size: 18px;
+	padding: 5px 0 5px 10px;
+	color: var(--softBlue);
+}
+
+.price {
+	display: flex;
+	padding: 20px 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.coin-price {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.coin-price span {
+	color: var(--cyan);
+	font-weight: 700;
+}
+
+.time {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.time span {
+	color: var(--softBlue);
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background-color: var(--softBlue);
+	opacity: 0.5;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+.user img {
+	width: 35px;
+	border: 1px solid var(--white);
+	border-radius: 50%;
+}
+
+.user p {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.user p .name {
+	color: var(--white);
+}
+
+h1:hover,
+.user p .name:hover {
+	transition: all 0.3s;
+	color: var(--cyan);
+	cursor: pointer;
+}
